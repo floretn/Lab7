@@ -13,7 +13,8 @@ public class Task8 {
     public static TreeMap<String, Set<Integer>> readFile(String path) throws IOException {
         TreeMap<String, Set<Integer>> treeMap = new TreeMap<>();
         Stream<String> stream = Files.lines(Paths.get(path));
-        String[] lines = stream.toArray(String[]::new);
+        stream.close(); //TODO почитать, нужно ли закрывать стрим.
+        String[] lines = stream.toArray(String[]::new); //TODO переделать нормально
         for (int i = 0; i < lines.length; i++){
             for (String word : lines[i].split(" ")){
                 int j = i;

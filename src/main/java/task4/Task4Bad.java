@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
-public class Task4 {
+public class Task4Bad {
 
     public static void main(String[] args) {
         List<Integer> list
