@@ -23,8 +23,10 @@ public class Task4Good {
 
     public static void main(String[] args) {
 
-        List<Integer> list = new ArrayList<Integer>(Arrays.asList(19, 5, 33, 144, 5, 19)); //TODO переделать
-        System.out.println(list.getClass());
+        List<Integer> list = new ArrayList<>(Arrays.asList(19, 5, 33, 144, 5, 19));
+        //List<Integer> list = Arrays.asList(19, 5, 33, 144, 5, 19);
+        //List<Integer> list = new ArrayList<Integer>() {{add(19); add(5);}};
+        //System.out.println(list.getClass());
         /*
         for (int i = 0; i < list.size(); i++){
             if (list.get(i) == 5){
@@ -32,14 +34,16 @@ public class Task4Good {
             }
         }
 
-         */
+        */
         //list.removeIf(integer -> integer == 5);
-        Iterator<Integer> iterator = list.iterator();
+
+        Iterator<Integer> iterator = list.iterator(); //TODO разобраться - asList(1,2,3) возвращает другой AL, который наследует абстрактный лист
         while (iterator.hasNext()){
             if (iterator.next() == 5){
                 iterator.remove();
             }
         }
+
         int i = 0;
         for (Integer integer : list){
             if (integer == 5){

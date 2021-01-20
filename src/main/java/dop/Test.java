@@ -30,5 +30,16 @@ public class Test {
         BitSet bitSet = new BitSet();
         bitSet.set(123);
         System.out.println(bitSet);
+        LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>();
+        linkedHashSet.add(2);
+        linkedHashSet.add(1);
+        linkedHashSet.add(3);
+        System.out.println(linkedHashSet);
+        linkedHashSet.add(2);
+        System.out.println(linkedHashSet);
+        linkedHashSet.add(4);
+        linkedHashSet.remove(1);
+        System.out.println(linkedHashSet);
+
     }
 }

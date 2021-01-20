@@ -10,7 +10,7 @@ public class Method {
         return new AbstractList<T>() {
             @Override
             public T get(int index) {
-                if (index > n - 1){
+                if (index > n - 1 || index < 0){
                     throw new IndexOutOfBoundsException();
                 }
                 return function.apply(index);
@@ -19,11 +19,6 @@ public class Method {
             @Override
             public int size() {
                 return n;
-            }
-
-            @Override
-            public Object[] toArray() {
-                throw new UnsupportedOperationException();
             }
         };
     }
